@@ -4,32 +4,31 @@
   </a>
 
   <nav class="main-nav">
-    <ul class="main-nav__list">
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Home</a>
-      </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Search</a>
-      </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Library</a>
-      </li>
-    </ul>
+    <mat-nav-list class="main-nav__list" role="navigation">
+      <a mat-list-item class="main-nav__link" routerLink="/" [activated]="true">
+        <mat-icon matListItemIcon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        Home
+      </a>
+      <a mat-list-item class="main-nav__link" href="#" routerLink="/search">
+        <mat-icon matListItemIcon aria-hidden="false" aria-label="Search" fontIcon="search"></mat-icon>
+        Search</a>
+      <a mat-list-item class="main-nav__link" routerLink="/collection" href="#">
+        <mat-icon matListItemIcon aria-hidden="false" aria-label="Search" fontIcon="library_music"></mat-icon>
+        Library</a>
+    </mat-nav-list>
   </nav>
 
   <div class="user-actions-menu">
-    <ul class="user-actions-menu__list">
-      <li class="user-actions-menu__item">
-        <a class="user-actions-menu__link" href="#">
-          Create playlist
-        </a>
-      </li>
-      <li class="user-actions-menu__item">
-        <a class="user-actions-menu__link" href="#">
+    <mat-nav-list class="user-actions-menu__list" role="navigation">
+      <a mat-list-item class="user-actions-menu__link" routerLink="/playlist/newID">
+        <mat-icon matListItemIcon aria-hidden="false" aria-label="Create playlist" fontIcon="add"></mat-icon>
+        Create playlist
+      </a>
+        <a  mat-list-item class="user-actions-menu__link" routerLink="/collection/favorite">
+          <mat-icon matListItemIcon aria-hidden="false" aria-label="Favorite songs" fontIcon="star"></mat-icon>
           Favorite songs
         </a>
-      </li>
-    </ul>
+    </mat-nav-list >
   </div>
 
   <div class="playlist-content">
