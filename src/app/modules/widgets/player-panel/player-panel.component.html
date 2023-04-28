@@ -1,0 +1,57 @@
+<mat-toolbar class="player-panel">
+    <mat-card class="current-song player-panel__current-song ">
+      <mat-card-header class="current-song__preview">
+        <div mat-card-avatar class="current-song__cover"></div>
+        <mat-card-title class="current-song__title">Name song</mat-card-title>
+        <mat-card-subtitle class="current-song__author">Author song</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button class="current-song__favorite-button" mat-mini-fab aria-label="Add to favorite">
+          <mat-icon>favorite_border</mat-icon>
+        </button>
+
+        <button style="display: none" class="current-song__favorite-button" mat-mini-fab aria-label="Remove from favorite">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  <div class="action-buttons player-panel__action-buttons">
+    <div class="action-buttons__wrapper">
+      <button class="action-buttons__button action-buttons__button--shuffle" mat-button>
+        <mat-icon aria-label="Shuffle">shuffle</mat-icon>
+      </button>
+      <button class="action-buttons__button action-buttons__button--previous" mat-button>
+        <mat-icon aria-label="Previous track">skip_previous</mat-icon>
+      </button>
+      <button style="display: none" class="action-buttons__button action-buttons__button--play" mat-button>
+        <mat-icon aria-label="Play">play_arrow</mat-icon>
+        </button>
+      <button class="action-buttons__button action-buttons__button--pause" mat-button>
+        <mat-icon aria-label="Pause">pause</mat-icon>
+        </button>
+      <button class="action-buttons__button action-buttons__button--next" mat-button>
+        <mat-icon aria-label="Next track">skip_next</mat-icon>
+      </button>
+      <button class="action-buttons__button action-buttons__button--repeat" mat-button>
+        <mat-icon aria-label="Repeat">repeat</mat-icon>
+      </button>
+<!--      repeat_one-->
+    </div>
+    <div class="action-buttons__track-progress">
+      <mat-progress-bar></mat-progress-bar>
+    </div>
+  </div>
+
+  <div class="user-actions player-panel__user-actions">
+    <a mat-button class="user-actions__link" href="#">
+      <mat-icon aria-label="Lyrics">lyrics</mat-icon>
+    </a>
+    <a mat-button class="user-actions__link" href="#">
+      <mat-icon aria-label="Queue">queue_music</mat-icon>
+    </a>
+    <mat-slider min="0" max="100" step="1" showTickMarks discrete>
+      <input matSliderThumb>
+    </mat-slider>
+  </div>
+</mat-toolbar>
