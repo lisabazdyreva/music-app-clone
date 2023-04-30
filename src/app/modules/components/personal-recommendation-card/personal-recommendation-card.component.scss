@@ -1,11 +1,12 @@
 .personal-recommendation-card {
-  min-width: 300px;
-  max-width: 500px;
+  width: 180px;
+  align-items: center;
+  padding: 15px;
 
-  &__image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+  //&__image {
+  //  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  //  background-size: cover;
+  //}
 
   &__image {
     border-radius: 4px;
@@ -16,6 +17,13 @@
   }
 
   &__title {
-    margin: 0 10px;
+    margin: 10px 10px 0;
+    font-weight: 500;
   }
+
+  &__subtitle {
+    margin: 5px 10px 0;
+    font-size: 0.9rem;
+  }
+
 }

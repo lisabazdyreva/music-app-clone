@@ -3,6 +3,14 @@
     <app-sidenav></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
+    <mat-toolbar class="content-header">
+      <button mat-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-toolbar>
     <router-outlet></router-outlet>
     <app-player-panel></app-player-panel>
   </mat-sidenav-content>

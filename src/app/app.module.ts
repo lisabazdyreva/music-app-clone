@@ -5,16 +5,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { PersonalRecommendationModule } from './modules/widgets/personal-recommendation/personal-recommendation.module';
 import { SidenavModule } from './modules/widgets/sidenav/sidenav.module';
-import { RadioRecommendationModule } from './modules/widgets/radio-recommendation/radio-recommendation.module';
 import { PlayerPanelModule } from './modules/widgets/player-panel/player-panel.module';
 import { SearchFormModule } from './modules/widgets/search-form/search-form.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 
-import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CollectionPageComponent } from './pages/collection-page/collection-page.component';
 import { FavoritePageComponent } from './pages/favorite-page/favorite-page.component';
@@ -24,22 +21,28 @@ import { GenreSearchModule } from './modules/widgets/genre-search/genre-search.m
 import { CreatePlaylistFormModule } from './modules/widgets/create-playlist-form/create-playlist-form.module';
 import { FavoriteSongsTableModule } from './modules/widgets/favorite-songs-table/favorite-songs-table.module';
 
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { MainPageModule } from './pages/main-page/main-page.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
     SearchPageComponent,
     CollectionPageComponent,
     FavoritePageComponent,
     CreatePlaylistPageComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatCardModule,
-    PersonalRecommendationModule,
-    RadioRecommendationModule,
+    MatToolbarModule,
     PlayerPanelModule,
     SidenavModule,
     SearchFormModule,
@@ -47,13 +50,17 @@ import { FavoriteSongsTableModule } from './modules/widgets/favorite-songs-table
     GenreSearchModule,
     CreatePlaylistFormModule,
     FavoriteSongsTableModule,
+    MainPageModule,
     RouterModule.forRoot([
       { path: '', component: MainPageComponent },
       { path: 'search', component: SearchPageComponent },
       { path: 'collection', component: CollectionPageComponent },
       { path: 'playlist/newID', component: CreatePlaylistPageComponent },
       { path: 'collection/favorite', component: FavoritePageComponent },
+      { path: 'login', component: LoginPageComponent },
     ]),
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.ng-star-inserted {
+  height: calc(100% - 112px); // player panel space
+  display: block;
+  overflow: auto;
+}
