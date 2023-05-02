@@ -18,7 +18,7 @@ import { FavoritePageComponent } from './pages/favorite-page/favorite-page.compo
 import { CreatePlaylistPageComponent } from './pages/create-playlist-page/create-playlist-page.component';
 import { RecentSearchModule } from './modules/widgets/recent-search/recent-search.module';
 import { GenreSearchModule } from './modules/widgets/genre-search/genre-search.module';
-import { CreatePlaylistFormModule } from './modules/widgets/create-playlist-form/create-playlist-form.module';
+import { CreatePlaylistPopupModule } from './modules/widgets/create-playlist-popup/create-playlist-popup.module';
 import { FavoriteSongsTableModule } from './modules/widgets/favorite-songs-table/favorite-songs-table.module';
 
 import { MainPageComponent } from './pages/main-page/main-page.component';
@@ -27,6 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import {CreatePlaylistPageModule} from './pages/create-playlist-page/create-playlist-page.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     SearchPageComponent,
     CollectionPageComponent,
     FavoritePageComponent,
-    CreatePlaylistPageComponent,
     LoginPageComponent,
   ],
   imports: [
@@ -48,9 +48,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     SearchFormModule,
     RecentSearchModule,
     GenreSearchModule,
-    CreatePlaylistFormModule,
     FavoriteSongsTableModule,
     MainPageModule,
+    CreatePlaylistPageModule,
     RouterModule.forRoot([
       { path: '', component: MainPageComponent },
       { path: 'search', component: SearchPageComponent },
